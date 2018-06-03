@@ -44,9 +44,9 @@ def create_app(test_config=None):
     from . import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
-
     # NOTE: the auth blueprint didn't have a add_url_rule because auth.py
     # already has url rules. 'index' goes with '/'.
+
     return app
 
 # NOTES
